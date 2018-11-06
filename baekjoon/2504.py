@@ -20,7 +20,10 @@ def is_good(ss):
             else:
                 return False
 
-        return True
+        if len(temp_stack) == 0:
+            return True
+        else:
+            return False
     except:
         return False
 
@@ -34,7 +37,7 @@ if not is_good(s):
 m_stack = []
 
 for i in s:
-    if i == '(' or i =='[' or is_int(i) :
+    if i == '(' or i =='[':
         m_stack.append(i)
     else:
         temp = m_stack[-1]
